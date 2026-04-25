@@ -41,6 +41,30 @@ body {
   font-size: 1rem;
 }
 
+/* Navigation bar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1f2937;
+  background: #ffffff;
+  border: 1px solid #d9dde3;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.navbar a:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
 /* Section boxes */
 section {
   background-color: #ffffff;
@@ -163,6 +187,22 @@ select {
   font-weight: bold;
 }
 
+/* Skills section layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual skill badges */
+.skills-grid span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: bold;
+}
+
 /* Section top row */
 .section-top {
   display: flex;
@@ -170,10 +210,6 @@ select {
   align-items: center;
   gap: 16px;
   margin-bottom: 10px;
-}
-
-#loadReposBtn {
-  white-space: nowrap;
 }
 
 /* Project controls */
@@ -201,6 +237,14 @@ select {
   padding: 16px;
   background: #fafafa;
   min-height: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Project card hover effect */
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: #c7d0db;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .project-content p {
@@ -281,6 +325,35 @@ select {
   font-style: italic;
 }
 
+/* Scroll to top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+#scrollTopBtn:hover {
+  background: #374151;
+  transform: translateY(-2px);
+}
+
 /* Dark mode */
 .dark {
   background: #111827;
@@ -292,6 +365,16 @@ select {
 .dark .repo-meta,
 .dark #emptyMessage {
   color: #c0c7d2;
+}
+
+.dark .navbar a {
+  background: #1f2937;
+  color: #f3f4f6;
+  border-color: #374151;
+}
+
+.dark .navbar a:hover {
+  background: #374151;
 }
 
 .dark section {
@@ -328,10 +411,20 @@ select {
   background-color: #4b5563;
 }
 
+.dark .skills-grid span {
+  background: #374151;
+  color: #e5e7eb;
+}
+
 .dark .project-card,
 .dark .repo-card {
   background-color: #243041;
   border-color: #415069;
+}
+
+.dark .project-card:hover {
+  box-shadow: none;
+  border-color: #5b6b85;
 }
 
 .dark .project-tag {
@@ -346,6 +439,10 @@ select {
 
 .dark .repo-card a {
   color: #93c5fd;
+}
+
+.dark #scrollTopBtn {
+  background: #374151;
 }
 
 /* Section fade-in */
@@ -385,7 +482,6 @@ select {
 
   #themeToggle,
   #saveNameBtn,
-  #loadReposBtn,
   #contact button {
     width: 100%;
   }

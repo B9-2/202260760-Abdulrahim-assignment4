@@ -94,11 +94,7 @@ function updateProjects() {
     projectList.appendChild(project);
   });
 
-  if (projects.length === 0) {
-    emptyMessage.style.display = "block";
-  } else {
-    emptyMessage.style.display = "none";
-  }
+  emptyMessage.style.display = projects.length === 0 ? "block" : "none";
 }
 
 searchInput.addEventListener("input", updateProjects);
@@ -150,7 +146,6 @@ contactForm.addEventListener("submit", (event) => {
 });
 
 // GitHub API integration
-const loadReposBtn = document.getElementById("loadReposBtn");
 const repoStatus = document.getElementById("repoStatus");
 const repoList = document.getElementById("repoList");
 
@@ -204,7 +199,23 @@ async function loadRepositories() {
   }
 }
 
-loadReposBtn.addEventListener("click", loadRepositories);
+// Scroll to top button
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 
 // Run on page load
 updateProjects();

@@ -1,47 +1,52 @@
-# AI Usage Report (Assignment 3)
+# AI Usage Report (Assignment 4)
 
 ## Tools Used & Use Cases
+
 ### ChatGPT
-- **Planning features:** Helped me break down the Assignment 3 requirements and decide which features to add to the portfolio.
-- **HTML structure:** Helped me improve the page structure by adding new sections and organizing the layout better.
-- **CSS improvements:** Helped me improve the UI with cleaner spacing, cards, dark mode styling, responsive layout, and better overall consistency.
+- **Planning the assignment:** Helped me understand the Assignment 4 requirements and decide what needed to be improved from Assignment 3.
+- **Repository setup:** Helped me create a new Assignment 4 repository using my Assignment 3 project as a starting point.
+- **HTML structure:** Helped me improve the page structure by adding and organizing sections such as skills, navigation, projects, GitHub repositories, and contact.
+- **CSS improvements:** Helped me improve the UI with better spacing, cards, hover effects, dark mode styling, responsive layout, and a cleaner overall design.
 - **JavaScript features:**
-  - Helped me implement dark/light mode with `localStorage`
-  - Helped me add visitor name saving with `localStorage`
-  - Helped me build project search, filter, and sort features
+  - Helped me keep dark/light mode with `localStorage`
+  - Helped me keep visitor name saving with `localStorage`
+  - Helped me maintain project search, filter, and sort features
   - Helped me improve contact form validation
-  - Helped me integrate the GitHub API to load repositories dynamically
-- **Debugging:** Helped me fix logic issues, especially while working on filtering, sorting, and UI behavior.
-- **Documentation:** Helped me organize and improve the README, technical documentation, and AI usage report.
+  - Helped me load GitHub repositories automatically using the GitHub API
+  - Helped me add a scroll-to-top button
+- **Debugging:** Helped me fix layout and styling issues, especially with the scroll-to-top button and page interactions.
+- **Documentation:** Helped me prepare the AI usage report, README, and technical documentation.
 
 ### Other tools used
-- **GitHub** — I used GitHub to create the repository, manage commits, and publish the project.
+- **GitHub** — I used GitHub to create the Assignment 4 repository, manage commits, and publish the project.
 - **Visual Studio Code (VS Code)** — I used VS Code to write, edit, test, and organize all project files.
 
 ## Benefits & Challenges
+
 **Benefits**
-- Helped me plan the assignment step by step instead of trying to do everything at once.
-- Made it easier to improve the JavaScript logic for features like search, filtering, sorting, and API loading.
-- Helped me improve the interface and make the website more organized and user-friendly.
-- Saved time while debugging and refining the project.
+- Helped me build Assignment 4 step by step instead of changing everything at once.
+- Made it easier to improve the design and make the website look more complete and polished.
+- Helped me reuse my Assignment 3 work in a cleaner Assignment 4 version.
+- Helped me debug small UI problems and improve the user experience.
+- Saved time while improving the project structure and documentation.
 
 **Challenges / Limitations**
-- Some suggestions needed changes to match my own file structure and assignment requirements.
-- I still had to test features carefully in the browser, because not every change worked correctly the first time.
-- Some parts, especially the project filtering and sorting, needed multiple fixes before they worked as intended.
-- I had to make sure the final result stayed simple and suitable for a student assignment, not overdesigned.
+- Some suggestions needed changes to match my own project files and assignment requirements.
+- I still had to test the website in the browser after each change.
+- Some styling suggestions were too much or removed useful code, so I had to review them carefully.
+- I had to make sure the final website stayed simple, clear, and suitable for the assignment.
 
 ## Learning Outcomes
-- Learned how to use `localStorage` for more than one feature, such as theme saving and visitor name saving.
-- Improved understanding of JavaScript events like `click`, `input`, `change`, `submit`, and keyboard events.
-- Learned how to combine search, filter, and sort logic in one section.
-- Learned how to fetch and display data from an external API.
-- Improved understanding of responsive UI design and how CSS affects usability.
-- Improved debugging and testing skills while checking the behavior of different features together.
+- Learned how to reuse an older project as a base for a new assignment while keeping a separate repository.
+- Improved my understanding of HTML structure and organizing a personal portfolio website.
+- Improved my CSS skills for layout, hover effects, responsive design, and dark mode.
+- Learned how small UI features, like navigation and scroll-to-top, can improve usability.
+- Improved my understanding of JavaScript events and browser behavior.
+- Improved my testing process by checking the website after each change.
 
 ## Responsible Use & Modifications
-- I reviewed and tested the suggested ideas before adding them to my project.
-- I adjusted the structure and logic to match my own project and assignment requirements.
-- I made changes whenever something did not work correctly or did not fit the style I wanted.
-- I made sure I understood the features and how they work before keeping them in the final version.
-- I used AI as a support tool for problem-solving, debugging, and improving the project workflow.
+- I reviewed and tested the AI suggestions before adding them to my project.
+- I changed the code when it did not match my style or when it removed important parts.
+- I made sure the final website matched my own project structure and assignment requirements.
+- I tested the features in the browser to make sure they worked correctly.
+- I used AI as a support tool for planning, debugging, improving the interface, and writing documentation, not as a replacement for understanding the work.

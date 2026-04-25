@@ -1,9 +1,9 @@
-# Technical Documentation (Assignment 3)
+# Technical Documentation (Assignment 4)
 
 ## Project Overview
-This project is a more advanced version of my portfolio website built with HTML, CSS, and JavaScript. It builds on the previous assignments by adding API integration, more state management, stronger JavaScript logic, and a cleaner user interface.
+This project is the final polished version of my personal portfolio web application for Assignment 4. It builds on Assignment 3 by improving the structure, design, user experience, and overall presentation quality.
 
-The website contains the main sections of a portfolio website: Welcome, About Me, Projects, GitHub Repositories, and Contact.
+The website contains the main sections of a portfolio website: Welcome, About Me, Skills, Projects, GitHub Repositories, and Contact. It also includes interactive features such as dark mode, saved visitor name, project search/filter/sort, GitHub API loading, form validation, and a scroll-to-top button.
 
 ## Folder Structure
 - `index.html` — Main page structure
@@ -12,37 +12,48 @@ The website contains the main sections of a portfolio website: Welcome, About Me
 - `assets/images/` — Images used in the Projects section
 - `docs/ai-usage-report.md` — AI usage report
 - `docs/technical-documentation.md` — This document
+- `presentation/` — Presentation slides and demo video
 
 ## HTML Structure (index.html)
 - `<main id="container">` wraps the main content of the page
+- Header:
+  - Shows my name, student information, and dark mode button
+- Navigation bar:
+  - Provides quick links to the main sections of the page
 - Sections:
   - `#welcome` — lets the visitor enter and save their name
   - `#about` — short introduction about me
+  - `#skills` — shows technical skills as badges
   - `#projects` — shows project cards with title, category, description, and image
     - Includes filter dropdown (`#filterProjects`)
     - Includes sort dropdown (`#sortProjects`)
     - Includes search input (`#projectSearch`)
     - Includes an empty state message (`#emptyMessage`)
-  - `#github-projects` — shows repositories loaded from the GitHub API
-    - Includes refresh button (`#loadReposBtn`)
+  - `#github-projects` — shows repositories loaded automatically from the GitHub API
     - Includes status message (`#repoStatus`)
     - Includes repository container (`#repoList`)
   - `#contact` — contact form with name, email, and message
     - Includes a feedback message element (`#formMessage`)
+- `#scrollTopBtn` — button used to scroll back to the top of the page
 
 ## CSS Styling (css/styles.css)
 - The layout is centered using `#container` with a max-width.
-- Sections are styled like cards using padding, rounded corners, borders, and a light shadow.
-- The hero area at the top shows the name, subtitle, and dark mode button in a cleaner layout.
+- Sections are styled like cards using padding, rounded corners, borders, and light shadow.
+- The hero area at the top shows the name, subtitle, and dark mode button in a clean layout.
+- The navigation bar uses rounded links to make page navigation easier.
+- The skills section uses badge-style elements.
 - The projects section uses a grid for controls and project cards.
+- Project cards include hover effects to make the interface feel more interactive.
 - The GitHub section uses repository cards instead of a simple list.
 - Inputs, buttons, and dropdowns are styled consistently.
-- Images are responsive using `max-width: 100%` and `height: auto`.
+- The scroll-to-top button is fixed at the bottom-right of the page.
+- Images use fixed card heights with `object-fit` for a cleaner layout.
 - Responsive behavior:
   - On smaller screens, layouts stack vertically.
-  - Buttons can stretch to full width for easier use on mobile.
+  - Project cards become one-column cards.
+  - Main buttons can stretch to full width for easier mobile use.
 - Dark mode:
-  - The `.dark` class changes the background, text, cards, inputs, and buttons.
+  - The `.dark` class changes the background, text, cards, inputs, buttons, navigation links, and project tags.
   - Dark mode also updates the custom dropdown arrow colors.
 
 ## JavaScript Interactivity (js/script.js)
@@ -86,19 +97,31 @@ The website contains the main sections of a portfolio website: Welcome, About Me
 ### 5. GitHub API Integration
 - The GitHub section fetches public repositories from the GitHub API.
 - Repositories are loaded automatically when the page opens.
-- The refresh button allows loading them again.
 - Each repository is displayed in a styled card with:
   - repository name
   - description
   - main language
 - If loading fails, an error message is shown to the user.
 
+### 6. Scroll-to-Top Button
+- The scroll button appears after the user scrolls down the page.
+- When clicked, it smoothly scrolls the user back to the top.
+- This improves the user experience, especially on longer pages.
+
 ## Performance and Compatibility
 - Images use `loading="lazy"` to improve loading performance.
 - The website uses plain HTML, CSS, and JavaScript without heavy libraries.
 - The layout is responsive and works better across different screen sizes.
 - The code is separated into clear files for structure and readability.
+- Error messages are shown when form input is invalid or when repositories cannot be loaded.
 
 ## How to Run Locally
 1. Open the project folder in VS Code.
 2. Open `index.html` in a browser, or use the VS Code Live Server extension.
+3. Test the main features:
+   - Save visitor name
+   - Toggle dark/light mode
+   - Search, filter, and sort projects
+   - Check GitHub repositories loading
+   - Submit the contact form with valid and invalid inputs
+   - Scroll down and test the scroll-to-top button
