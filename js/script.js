@@ -1,5 +1,5 @@
 // Save visitor name
-const visitorName = document.getElementById("visitorName");
+const visitorName = document.getElementById("visitorNameInput");
 const saveNameBtn = document.getElementById("saveNameBtn");
 const welcomeMessage = document.getElementById("welcomeMessage");
 
@@ -13,14 +13,12 @@ if (savedName) {
 
 // Keep the input field empty when the page opens
 visitorName.value = "";
+visitorName.setAttribute("value", "");
 
-window.addEventListener("load", () => {
+window.addEventListener("pageshow", () => {
   visitorName.value = "";
+  visitorName.setAttribute("value", "");
 });
-
-setTimeout(() => {
-  visitorName.value = "";
-}, 100);
 
 function saveVisitorName() {
   const nameValue = visitorName.value.trim();
@@ -28,7 +26,9 @@ function saveVisitorName() {
   if (nameValue === "") {
     welcomeMessage.textContent = "Please enter your name.";
     welcomeMessage.style.color = "red";
+
     visitorName.value = "";
+    visitorName.setAttribute("value", "");
     return;
   }
 
@@ -36,8 +36,10 @@ function saveVisitorName() {
   welcomeMessage.textContent = `Welcome, ${nameValue}!`;
   welcomeMessage.style.color = "inherit";
 
-  // Clear the input field after saving
+  // Clear the field after saving
   visitorName.value = "";
+  visitorName.setAttribute("value", "");
+  visitorName.blur();
 }
 
 saveNameBtn.addEventListener("click", saveVisitorName);
