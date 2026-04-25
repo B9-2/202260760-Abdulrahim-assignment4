@@ -7,8 +7,20 @@ const savedName = localStorage.getItem("visitorName");
 
 if (savedName) {
   welcomeMessage.textContent = `Welcome, ${savedName}!`;
-  visitorName.value = "";
+} else {
+  welcomeMessage.textContent = "Welcome, guest!";
 }
+
+// Keep the input field empty when the page opens
+visitorName.value = "";
+
+window.addEventListener("load", () => {
+  visitorName.value = "";
+});
+
+setTimeout(() => {
+  visitorName.value = "";
+}, 100);
 
 function saveVisitorName() {
   const nameValue = visitorName.value.trim();
@@ -24,9 +36,8 @@ function saveVisitorName() {
   welcomeMessage.textContent = `Welcome, ${nameValue}!`;
   welcomeMessage.style.color = "inherit";
 
-  // Clear the input after saving
+  // Clear the input field after saving
   visitorName.value = "";
-  visitorName.blur();
 }
 
 saveNameBtn.addEventListener("click", saveVisitorName);
@@ -82,6 +93,7 @@ function updateProjects() {
 
     const matchesSearch =
       title.includes(searchValue) || text.includes(searchValue);
+
     const matchesCategory =
       selectedCategory === "all" || category === selectedCategory;
 
@@ -169,7 +181,9 @@ async function loadRepositories() {
 
     let repos = await response.json();
 
-    repos = repos.filter((repo) => repo.name !== "202260760-Abdulrahim-assignment2");
+    repos = repos.filter(
+      (repo) => repo.name !== "202260760-Abdulrahim-assignment2"
+    );
 
     repos.sort((a, b) => a.name.localeCompare(b.name));
 

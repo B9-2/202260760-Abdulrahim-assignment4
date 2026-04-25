@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script defer src="js/script.js"></script>
+    <script defer src="js/script.js?v=2"></script>
   </head>
   <body>
     <main id="container">
@@ -31,7 +31,13 @@
         <p class="section-note">You can save your name and the website will remember it.</p>
 
         <div class="welcome-row">
-          <input type="text" id="visitorName" placeholder="Enter your name" />
+          <input
+            type="text"
+            id="visitorName"
+            name="portfolioVisitorName"
+            placeholder="Enter your name"
+            autocomplete="off"
+          />
           <button id="saveNameBtn" type="button">Save</button>
         </div>
 
