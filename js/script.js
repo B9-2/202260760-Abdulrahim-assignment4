@@ -7,6 +7,7 @@ const savedName = localStorage.getItem("visitorName");
 
 if (savedName) {
   welcomeMessage.textContent = `Welcome, ${savedName}!`;
+  visitorName.value = "";
 }
 
 function saveVisitorName() {
@@ -15,6 +16,7 @@ function saveVisitorName() {
   if (nameValue === "") {
     welcomeMessage.textContent = "Please enter your name.";
     welcomeMessage.style.color = "red";
+    visitorName.value = "";
     return;
   }
 
@@ -24,6 +26,7 @@ function saveVisitorName() {
 
   // Clear the input after saving
   visitorName.value = "";
+  visitorName.blur();
 }
 
 saveNameBtn.addEventListener("click", saveVisitorName);
