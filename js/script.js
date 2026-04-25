@@ -4,9 +4,9 @@ const saveNameBtn = document.getElementById("saveNameBtn");
 const welcomeMessage = document.getElementById("welcomeMessage");
 
 const savedName = localStorage.getItem("visitorName");
+
 if (savedName) {
   welcomeMessage.textContent = `Welcome, ${savedName}!`;
-  visitorName.value = savedName;
 }
 
 function saveVisitorName() {
@@ -21,6 +21,9 @@ function saveVisitorName() {
   localStorage.setItem("visitorName", nameValue);
   welcomeMessage.textContent = `Welcome, ${nameValue}!`;
   welcomeMessage.style.color = "inherit";
+
+  // Clear the input after saving
+  visitorName.value = "";
 }
 
 saveNameBtn.addEventListener("click", saveVisitorName);
